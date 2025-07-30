@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="audio1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <div>
+            <h1 class="header_text">Varuuu, Please Maaaf Kardo Betu !!</h1>
+            <h1 class="header_text">Aage Se Kabhi Koi Kalesh Nhi Krunga </h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExem4zamdlZWZzNmswZjJxcXFwc3lkMHcyNnAwMW45a3cydGgzYTdnZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IJjhKO6is7tMA/giphy.gif" alt="cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onClick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onClick="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
